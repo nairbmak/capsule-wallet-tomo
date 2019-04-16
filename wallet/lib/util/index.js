@@ -5,24 +5,16 @@ var Util = function () { }
 Util.chainCode = function (net) {
   net = net.toString().toLowerCase();
   switch (net) {
-    case '1':
-      return 1;
+    case '88':
+      return 88;
     case 'mainnet':
-      return 1;
-    case '3':
-      return 3;
-    case 'ropsten':
-      return 3;
-    case '42':
-      return 42;
-    case 'kovan':
-      return 42;
-    case '4':
-      return 4;
-    case 'rinkeby':
-      return 4;
+      return 88;
+    case '89':
+      return 89;
+    case 'testnet':
+      return 89;
     default:
-      return 1;
+      return 89;
   }
 }
 

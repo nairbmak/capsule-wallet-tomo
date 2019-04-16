@@ -21,23 +21,11 @@
 }
 
 .mainnet {
-  background-color: #038789 !important;
+  background-color: $c-green !important;
 }
 
-.rinkeby {
-  background-color: #ebb33f !important;
-}
-
-.ropsten {
-  background-color: #e91550 !important;
-}
-
-.kovan {
-  background-color: #690496 !important;
-}
-
-.privatenet {
-  background-color: $c-black !important;
+.testnet {
+  background-color: $c-red !important;
 }
 
 .loading {

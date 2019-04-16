@@ -31,7 +31,7 @@ class InputAsset extends Component {
   }
 
   onSelect(key) {
-    if (key === 'back') return window.capsuleWallet.back();
+    if (key === 'back') return window.capsuleWalletTomo.back();
     return this.setState({ subType: key });
   }
 

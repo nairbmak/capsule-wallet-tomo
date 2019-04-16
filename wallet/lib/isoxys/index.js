@@ -126,7 +126,7 @@ class Isoxys extends WalletInterface {
    * Get list of accounts by mnemonic
    * @param {*} mnemonic - 12 words 
    * @param {*} password - (optional) password
-   * @param {*} path - root derivation path (m/44'/60'/0'/0 as default)
+   * @param {*} path - root derivation path (m/44'/889'/0'/0 as default)
    * @param {*} limit - the number of record per page
    * @param {*} page - index of page
    */
@@ -184,7 +184,7 @@ class Isoxys extends WalletInterface {
   /**
    * @func setAccountByLedger
    * Set account by ledger
-   * @param {*} path - root derivation path (m/44'/60'/0' as default)
+   * @param {*} path - root derivation path (m/44'/889'/0'/0 as default)
    * @param {*} index - (optional)
    */
   setAccountByLedger(path, index, callback) {
@@ -200,7 +200,7 @@ class Isoxys extends WalletInterface {
   /**
    * @func getAccountsByLedger
    * Get list of accounts by ledger
-   * @param {*} path - root derivation path (m/44'/60'/0' as default)
+   * @param {*} path - root derivation path (m/44'/889'/0'/0 as default)
    * @param {*} limit 
    * @param {*} page 
    */

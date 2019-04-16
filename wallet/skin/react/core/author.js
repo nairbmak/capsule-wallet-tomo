@@ -16,13 +16,13 @@ class Author extends Component {
       <div className={cx("row", "wallet-copyright")}>
         <div className={cx("col")}>
           <div className={cx("d-flex", "h-100", "justify-content-start", "align-items-center")}>
-            <p className={cx("white")}>A product powered by</p><i className={cx("kambria")} />
+            <p className={cx("white")}>A product powered by</p><i className={cx("nairbmak")} />
           </div>
         </div>
         <div className={cx("col")}>
           <div className={cx("d-flex", "h-100", "justify-content-end", "align-items-center")}>
             <i className={cx("github")} />
-            <a className={cx("white")} href="https://github.com/sontuphan/capsule-wallet" target="_blank" rel="noopener noreferrer" >View on Github</a>
+            <a className={cx("white")} href="https://github.com/nairbmak/capsule-wallet-tomo" target="_blank" rel="noopener noreferrer" >View on Github</a>
           </div>
         </div>
       </div>

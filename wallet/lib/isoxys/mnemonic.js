@@ -27,7 +27,7 @@ Mnemonic.seedToHDKey = function (seed) {
 }
 
 Mnemonic.hdkeyToAddress = function (hdkey, dpath, index) {
-  dpath = dpath || _default.ETH_DERIVATION_PATH;
+  dpath = dpath || _default.TOMO_DERIVATION_PATH;
   dpath = util.addDPath(dpath, index);;
   var child = hdkey.derive(dpath);
   if (child.publicKey) var addr = ethUtil.pubToAddress(child.publicKey, true /* multi pub-format */);
@@ -37,7 +37,7 @@ Mnemonic.hdkeyToAddress = function (hdkey, dpath, index) {
 }
 
 Mnemonic.hdkeyToAccount = function (hdkey, dpath, index) {
-  dpath = dpath || _default.ETH_DERIVATION_PATH;
+  dpath = dpath || _default.TOMO_DERIVATION_PATH;
   dpath = util.addDPath(dpath, index);;
   var child = hdkey.derive(dpath);
   var priv = child.privateKey;

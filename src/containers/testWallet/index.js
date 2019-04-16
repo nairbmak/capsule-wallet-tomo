@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Wallet from 'capsule-wallet';
+import Wallet from 'capsule-wallet-tomo';
 
 
 class TestWallet extends Component {
@@ -72,11 +72,11 @@ class TestWallet extends Component {
           <p>Network: {this.state.network}</p>
           <p>Account: {this.state.account}</p>
           <p>Balance: {this.state.balance}</p>
-          <p>Previous tx id: <a target="_blank" rel="noopener noreferrer" href={"https://rinkeby.etherscan.io/tx/" + this.state.txId}>{this.state.txId}</a></p>
+          <p>Previous tx id: <a target="_blank" rel="noopener noreferrer" href={"https://scan.testnet.tomochain.com/" + this.state.txId}>{this.state.txId}</a></p>
           <button onClick={this.sendTx}>Send Tx</button>
           {this.state.error ? <a >{this.state.error}</a> : null}
         </div>
-        <Wallet visible={this.state.visible} net={3} done={this.done} />
+        <Wallet visible={this.state.visible} net={89} done={this.done} />
       </div>
     );
   }

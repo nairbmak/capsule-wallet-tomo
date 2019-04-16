@@ -32,7 +32,7 @@ const DEFAULT_STATE = {
 }
 
 
-class CapsuleWallet extends Component {
+class CapsuleWalletTomo extends Component {
 
   /**
    * @props net - Chain code
@@ -45,7 +45,7 @@ class CapsuleWallet extends Component {
     this.FSM = new FiniteStateMachine();
 
     this.state = {
-      net: this.props.net ? this.props.net : 1, // mainnet as default
+      net: this.props.net ? this.props.net : 88, // mainnet as default
       ...DEFAULT_STATE
     }
 
@@ -58,9 +58,9 @@ class CapsuleWallet extends Component {
      * Group of global functions
      */
     var self = this;
-    window.capsuleWallet = { author: 'Tu Phan', git: 'https://github.com/sontuphan/capsule-wallet' }
-    window.capsuleWallet.net = this.state.net;
-    window.capsuleWallet.getPassphrase = {
+    window.capsuleWalletTomo = { author: 'Tu Phan', git: 'https://github.com/nairbmak/capsule-wallet-tomo' }
+    window.capsuleWalletTomo.net = this.state.net;
+    window.capsuleWalletTomo.getPassphrase = {
       open: function (callback) {
         self.setState({ passphrase: false, returnPassphrase: null }, () => {
           self.setState({ passphrase: true, returnPassphrase: callback });
@@ -70,7 +70,7 @@ class CapsuleWallet extends Component {
         self.setState({ passphrase: false, returnPassphrase: null });
       },
     }
-    window.capsuleWallet.getAuthentication = {
+    window.capsuleWalletTomo.getAuthentication = {
       open: function (qrcode, callback) {
         self.setState({ authetication: false, qrcode: null }, () => {
           self.setState({ authetication: true, qrcode: qrcode, returnAuthetication: callback });
@@ -80,13 +80,13 @@ class CapsuleWallet extends Component {
         self.setState({ authetication: false, qrcode: null, returnAuthetication: null });
       },
     }
-    window.capsuleWallet.term = function () {
-      window.open('https://github.com/sontuphan/capsule-wallet/blob/master/LICENSE', '_blank');
+    window.capsuleWalletTomo.term = function () {
+      window.open('https://github.com/nairbmak/capsule-wallet-tomo/blob/master/LICENSE', '_blank');
     }
-    window.capsuleWallet.support = function () {
-      window.open('https://github.com/sontuphan/capsule-wallet/issues', '_blank');
+    window.capsuleWalletTomo.support = function () {
+      window.open('https://github.com/nairbmak/capsule-wallet-tomo/issues', '_blank');
     }
-    window.capsuleWallet.back = function () {
+    window.capsuleWalletTomo.back = function () {
       let state = self.FSM.back();
       return self.setState({ step: state.step });
     }
@@ -120,7 +120,7 @@ class CapsuleWallet extends Component {
     });
 
     if (state.step === 'Success') return self.onClose(() => {
-      window.capsuleWallet.provider = re.provider;
+      window.capsuleWalletTomo.provider = re.provider;
       self.done(null, re.provider);
     });
 
@@ -168,4 +168,4 @@ class CapsuleWallet extends Component {
 
 }
 
-export default CapsuleWallet; 
+export default CapsuleWalletTomo; 

@@ -13,7 +13,7 @@ const _default = require('./defaultConst');
 var Ledger = function () { }
 
 Ledger.getAddress = function (dpath, callback) {
-  dpath = dpath || util.addDPath(_default.ETH_DERIVATION_PATH, _default.ACCOUNT_INDEX);
+  dpath = dpath || util.addDPath(_default.TOMO_DERIVATION_PATH, _default.ACCOUNT_INDEX);
   Ledger.getCommunication(function (er, eth) {
     if (er) return callback(er, null);
 
@@ -27,7 +27,7 @@ Ledger.getAddress = function (dpath, callback) {
 }
 
 Ledger.signTransaction = function (dpath, rawTx, callback) {
-  dpath = dpath || util.addDPath(_default.ETH_DERIVATION_PATH, _default.ACCOUNT_INDEX);
+  dpath = dpath || util.addDPath(_default.TOMO_DERIVATION_PATH, _default.ACCOUNT_INDEX);
   if (!rawTx) return callback(error.INVALID_TX, null);
   Ledger.getCommunication(function (er, eth) {
     if (er) return callback(er, null);

@@ -78,9 +78,9 @@ class SellectWallet extends Component {
             </div>
           </div>
           <div className={cx("col-6", "col-sm-3", "col-lg")}>
-            <div className={cx("box", "active")} onClick={() => this.onMew('hybridwallet')}>
+            <div className={cx("box", "disabled")} onClick={() => this.onMew('hybridwallet')}>
               <i className={cx("mew")} />
-              <p>MEW</p>
+              <p>MEW (comming soon)</p>
             </div>
           </div>
           <div className={cx("col-6", "col-sm-3", "col-lg")}>

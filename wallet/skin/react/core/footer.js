@@ -12,11 +12,11 @@ class Footer extends Component {
   }
 
   support() {
-    window.capsuleWallet.support();
+    window.capsuleWalletTomo.support();
   }
 
   term() {
-    window.capsuleWallet.term();
+    window.capsuleWalletTomo.term();
   }
 
   render() {

@@ -22,12 +22,12 @@ class MewAsset extends Component {
       message: STATUS.INIT,
     }
 
-    this.mew = new MEW(window.capsuleWallet.net, 'hybridwallet', true);
+    this.mew = new MEW(window.capsuleWalletTomo.net, 'hybridwallet', true);
     this.establishTheConnection = this.establishTheConnection.bind(this);
   }
 
   establishTheConnection() {
-    this.mew.setAccountByMEW(window.capsuleWallet.getAuthentication, (er, data) => {
+    this.mew.setAccountByMEW(window.capsuleWalletTomo.getAuthentication, (er, data) => {
       if (er) return this.setState({ message: STATUS.FAIL });
       return this.props.done({ subType: 'mew', provider: this.mew });
     });
