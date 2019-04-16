@@ -51,8 +51,9 @@ class SellectWallet extends Component {
   }
 
   onMew(type) {
-    this.setState({ visible: false });
-    this.done(null, { wallet: 'mew', type: type });
+    return null; // Comming soon
+    // this.setState({ visible: false });
+    // this.done(null, { wallet: 'mew', type: type });
   }
 
   componentDidUpdate(prevProps) {
