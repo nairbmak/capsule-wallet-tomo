@@ -14,7 +14,7 @@ Util.chainCode = function (net) {
     case 'testnet':
       return 89;
     default:
-      return 89;
+      return null;
   }
 }
 
