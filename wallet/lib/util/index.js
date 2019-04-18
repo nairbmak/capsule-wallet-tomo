@@ -3,6 +3,7 @@ var ethTx = require('ethereumjs-tx');
 var Util = function () { }
 
 Util.chainCode = function (net) {
+  if(!net) return null;
   net = net.toString().toLowerCase();
   switch (net) {
     case '88':
